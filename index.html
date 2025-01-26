@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Força - CME</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img class="logotipocme" src="assets/cme.png" alt="Logotipo CME">
+            <h1>Mapa de Força - CME</h1>
+            <h3>Comando de Missões Especiais</h3>
+            <p id="data"></p>
+            <p>Escolha a sua UPM:</p>
+
+            <div class="unit">
+                <a href="https://forms.gle/2XimYQ6PKdsXVJbq9">
+                    <img class="logotipo" src="assets/bope.png" alt="Logotipo BOPE">
+                </a>
+                <p>BOPE</p>
+            </div>
+
+            <div class="unit">
+                <a href="https://forms.gle/gB47Mcb2LfEwFegYA">
+                    <img class="logotipo" src="assets/choque.png" alt="Logotipo BPCHOQUE">
+                </a>
+                <p>BPCHOQUE</p>
+            </div>
+
+            <div class="unit">
+                <a href="https://forms.gle/PnBiHYNSKdaX1aGm7">
+                    <img class="logotipo" src="assets/cavalaria.png" alt="Logotipo Cavalaria">
+                </a>
+                <p>CAVALARIA</p>
+            </div>
+
+            <div class="unit">
+                <a href="https://forms.gle/tDZTmpV5KK2NVrQ1A">
+                    <img class="logotipo" src="assets/rotam.png" alt="Logotipo ROTAM">
+                </a>
+                <p>ROTAM</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const data = document.getElementById('data');
+        const dataAtual = new Date();
+        const dia = dataAtual.getDate();
+        const mes = dataAtual.getMonth() + 1;
+        const ano = dataAtual.getFullYear();
+
+        const meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 
+                    'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+
+        data.innerHTML = `${dia} de ${meses[mes-1]} de ${ano}`;
+    </script>
+</body>
+</html>
